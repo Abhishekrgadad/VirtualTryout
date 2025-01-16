@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result - Virtual Try-On</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Virtual Try-On Result</h1>
+        <p class="text-center">Here is the result of your virtual fitting:</p>
+        <div class="text-center mt-4">
+            <img src="{{ output_image }}" alt="Output Image" class="img-fluid" style="max-width: 100%; height: auto;">
+        </div>
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-secondary">Try Again</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Try-On</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side -->
+        <div class="left-container">
+            <h2>Upload Images</h2>
+            <form method="POST" enctype="multipart/form-data">
+                <label for="user_image">User Image:</label>
+                <input type="file" id="user_image" name="user_image" accept="image/*">
+                {% if user_image %}
+                    <img src="{{ user_image }}" alt="User Image" class="thumbnail">
+                {% endif %}
+
+                <label for="cloth_image">Cloth Image:</label>
+                <input type="file" id="cloth_image" name="cloth_image" accept="image/*">
+                {% if cloth_image %}
+                    <img src="{{ cloth_image }}" alt="Cloth Image" class="thumbnail">
+                {% endif %}
+
+                <button type="submit">Apply Cloth</button>
+            </form>
+        </div>
+
+        <!-- Right Side -->
+        <div class="right-container">
+            <h2>Result</h2>
+            {% if result_image %}
+                <img src="{{ result_image }}" alt="Result Image" class="result-image">
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

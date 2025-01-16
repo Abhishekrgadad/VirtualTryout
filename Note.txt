@@ -1,2 +1,10 @@
 The files for Datasets are included from these sites.
 https://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html
+
+Installation libraries:
+    pip install flask transformers pillow opencv-python
+
+    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+    pip install flask transformers opencv-python pillow matplotlib
+
